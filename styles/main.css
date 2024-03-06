@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*Font variables*/
 
 .open-sans-300 {
@@ -70,6 +74,8 @@ header {
 
 }
 
+/*Online Presence block styles START*/
+
 .online-presence {
     background: url("../img/online-presence.png");
     background-size: cover;
@@ -91,6 +97,11 @@ header {
     margin-top: 20px;
 }
 
+/*Online Presence block styles END*/
+
+
+/*Welcome block styles START*/
+
 .welcome {
     display: flex;
     flex-direction: column;
@@ -109,6 +120,10 @@ header {
     color: black;
     margin-top: 20px;
 }
+
+/*Welcome block styles END*/
+
+/*Services styles START*/
 
 .services {
     display: grid;
@@ -141,24 +156,72 @@ header {
     margin-top: 20px;
 }
 
-/* Large screens: 2 columns */
 @media (min-width: 1401px) {
     .services {
-        grid-template-columns: repeat(2, 1fr); /* Creates 2 columns of equal width */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Medium screens and smaller: 1 column */
+
 @media (max-width: 1400px) {
     .services {
-        grid-template-columns: 1fr; /* Creates 1 column taking full width */
+        grid-template-columns: 1fr;
     }
     .service-card {
-        width: auto; /* Resets width to default so it fills the column */
-        padding-left: 20px; /* Adjust as necessary */
-        padding-right: 20px; /* Adjust as necessary */
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
+
+/*Services styles END*/
+
+/*Contact Us styles START*/
+
+.contact-us {
+    margin-top: 92px;
+    padding-left: 90px;
+    padding-top: 88px;
+    background-image: url("../img/contactUs.png");
+    background-size: cover;
+    height: 816px;
+    .contact-us-title {
+        font-size: 56px;
+        color: white;
+    }
+
+    .contact-us-text-card-container {
+        display: flex;
+
+        justify-content: space-between;
+    }
+
+    .contact-us-text-card {
+        color: white;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1401px) {
+    .services {
+
+    }
+}
+
+
+@media (max-width: 1400px) {
+    .services {
+
+    }
+
+}
+
+/*Contact Us styles END*/
+
+
+
+
+
 
 
 
