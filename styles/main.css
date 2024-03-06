@@ -109,3 +109,59 @@ header {
     color: black;
     margin-top: 20px;
 }
+
+.services {
+    display: grid;
+    width: 100%;
+    gap: 92px;
+    margin-top: 92px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 84px;
+    background: #F3FBFF;
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.service-title {
+    font-size: 30px;
+    color: #5A717C;
+    margin-top: 20px;
+}
+
+.service-text {
+    font-size: 18px;
+    color: #5A717C;
+    margin-top: 20px;
+}
+
+/* Large screens: 2 columns */
+@media (min-width: 1401px) {
+    .services {
+        grid-template-columns: repeat(2, 1fr); /* Creates 2 columns of equal width */
+    }
+}
+
+/* Medium screens and smaller: 1 column */
+@media (max-width: 1400px) {
+    .services {
+        grid-template-columns: 1fr; /* Creates 1 column taking full width */
+    }
+    .service-card {
+        width: auto; /* Resets width to default so it fills the column */
+        padding-left: 20px; /* Adjust as necessary */
+        padding-right: 20px; /* Adjust as necessary */
+    }
+}
+
+
+
+
+
+
