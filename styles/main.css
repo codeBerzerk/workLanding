@@ -15,12 +15,14 @@ html {
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
     font-style: normal;
+    line-height: 33px;
 }
 
 .open-sans-400 {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
+    line-height: 33px;
 }
 
 .open-sans-600 {
@@ -33,6 +35,7 @@ html {
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
     font-style: normal;
+    line-height: 33px;
 }
 
 .open-sans-800 {
@@ -135,8 +138,7 @@ header {
 .service-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 70px 84px;
+    padding: 70px ;
     background: #F3FBFF;
     img {
         width: 100px;
@@ -178,25 +180,32 @@ header {
 
 /*Contact Us styles START*/
 
-.contact-us {
+.why-choose {
     margin-top: 92px;
     padding-left: 90px;
+    padding-right: 78px;
     padding-top: 88px;
     background-image: url("../img/contactUs.png");
     background-size: cover;
     height: 816px;
-    .contact-us-title {
+    .why-choose-title {
         font-size: 56px;
         color: white;
     }
 
-    .contact-us-text-card-container {
-        display: flex;
-
-        justify-content: space-between;
+    .why-choose-text-card-container {
+        margin-top: 66px;
+        display: grid;
+        gap: 66px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .contact-us-text-card {
+    .why-choose-text-card {
+        color: white;
+        font-size: 18px;
+    }
+    .why-choose-subtitle {
+        margin-top: 66px;
         color: white;
         font-size: 18px;
     }
@@ -217,6 +226,32 @@ header {
 }
 
 /*Contact Us styles END*/
+
+/*Footer styles START*/
+
+footer {
+    height: 136px;
+    margin-top: 65px;
+    padding-left: 70px;
+    padding-right: 70px;
+    background: #495358;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .footer-connect {
+        font-size: 42px;
+        color: white;
+    }
+
+    a {
+        font-size: 22px;
+        text-decoration: underline;
+        color: white;
+    }
+}
+
+/*Footer styles END*/
 
 
 
