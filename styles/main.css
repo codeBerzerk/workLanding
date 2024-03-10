@@ -51,16 +51,28 @@ html {
     margin-right: 70px;
 }
 
+@media (max-width: 1400px) {
+    .container {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+
 header {
     margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: space-between;
 
     .logo {
         color: #5A717C;
         font-size: 20px;
+    }
+    @media (max-width: 1400px) {
+        .logo {
+            font-size: 16px;
+        }
     }
 
     nav ul {
@@ -68,13 +80,17 @@ header {
         display: flex;
         font-size: 16px;
     }
+    @media (max-width: 1400px) {
+        nav ul {
+            font-size: 14px;
+        }
+    }
 
     .nav-button a {
         margin-left: 40px;
         text-decoration: none;
         color: black;
     }
-
 }
 
 /*Online Presence block styles START*/
@@ -89,15 +105,36 @@ header {
     justify-content: center;
 }
 
+@media (max-width: 1400px) {
+    .online-presence {
+        height: 336px;
+        padding-left: 0;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+}
+
 .online-presence-title {
     font-size: 80px;
     color: white;
+}
+
+@media (max-width: 1400px) {
+    .online-presence-title {
+        font-size: 50px;
+    }
 }
 
 .online-presence-text {
     font-size: 56px;
     color: white;
     margin-top: 20px;
+}
+
+@media (max-width: 1400px) {
+    .online-presence-text {
+        font-size: 30px;
+    }
 }
 
 /*Online Presence block styles END*/
@@ -113,15 +150,35 @@ header {
     margin-right: 210px;
 }
 
+@media (max-width: 1400px) {
+    .welcome {
+        margin-top: 49px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 .welcome-title {
     font-size: 56px;
     color: #C3DCE8;
 }
 
+@media (max-width: 1400px) {
+    .welcome-title {
+        font-size: 46px;
+    }
+}
+
 .welcome-text {
     font-size: 18px;
     color: black;
-    margin-top: 20px;
+    margin-top: 18px;
+}
+
+@media (max-width: 1400px) {
+    .welcome-text {
+        font-size: 16px;
+    }
 }
 
 /*Welcome block styles END*/
@@ -135,6 +192,19 @@ header {
     margin-top: 92px;
 }
 
+@media (min-width: 1401px) {
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 1400px) {
+    .services {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-top: 19px;
+    }
+}
+
 .service-card {
     display: flex;
     flex-direction: column;
@@ -143,6 +213,13 @@ header {
     img {
         width: 100px;
         height: 100px;
+    }
+}
+@media (max-width: 1400px) {
+    .service-card {
+        width: auto;
+        padding: 50px;
+        margin-top: 30px;
     }
 }
 
@@ -158,39 +235,25 @@ header {
     margin-top: 20px;
 }
 
-@media (min-width: 1401px) {
-    .services {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-@media (max-width: 1400px) {
-    .services {
-        grid-template-columns: 1fr;
-    }
-    .service-card {
-        width: auto;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
 /*Services styles END*/
 
-/*Contact Us styles START*/
+/*Why Choose styles START*/
 
 .why-choose {
     margin-top: 92px;
-    padding-left: 90px;
-    padding-right: 78px;
-    padding-top: 88px;
     background-image: url("../img/contactUs.png");
     background-size: cover;
-    height: 816px;
+    padding: 88px 78px 100px 90px;
+    @media (max-width: 1400px) {
+        .why-choose {
+            padding: 50px 50px 100px 50px;
+            margin-top: 60px;
+        }
+    }
     .why-choose-title {
         font-size: 56px;
         color: white;
+
     }
 
     .why-choose-text-card-container {
@@ -199,30 +262,29 @@ header {
         gap: 66px;
         grid-template-columns: repeat(2, 1fr);
     }
+    @media (max-width: 1400px) {
+        .why-choose-text-card-container {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+    }
 
     .why-choose-text-card {
+        width: 90%;
         color: white;
         font-size: 18px;
+    }
+    @media (max-width: 1400px) {
+        .why-choose-text-card {
+            width: 100%;
+            margin-top: 36px;
+        }
     }
     .why-choose-subtitle {
         margin-top: 66px;
         color: white;
         font-size: 18px;
     }
-}
-
-@media (min-width: 1401px) {
-    .services {
-
-    }
-}
-
-
-@media (max-width: 1400px) {
-    .services {
-
-    }
-
 }
 
 /*Contact Us styles END*/
