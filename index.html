@@ -5,6 +5,7 @@
     <title>Nubilum Technologies</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <div class="container">
@@ -15,6 +16,19 @@
                 <li class="open-sans-700 nav-button"><a href="#whoWeAre">Who we Are</a></li>
                 <li class="open-sans-700 nav-button"><a href="#services">Services We Offer</a></li>
                 <li class="open-sans-700 nav-button"><a href="#contactUs">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav class="mobile-nav hidden">
+            <ul>
+                <li><a class="open-sans-300 nav-button" href="#whoWeAre" onclick="toggleMenu()">Who we Are</a></li>
+                <li><a class="open-sans-300 nav-button" href="#services" onclick="toggleMenu()">Services We Offer</a></li>
+                <li><a class="open-sans-300 nav-button" href="#contactUs" onclick="toggleMenu()">Contact us</a></li>
             </ul>
         </nav>
     </header>
@@ -115,5 +129,23 @@
     <p class="open-sans-700 footer-connect" id="contactUs">Connect with us now.</p>
     <a class="open-sans-700" href="mailto:info@nubilumtech.com">info@nubilumtech.com</a>
 </footer>
+
+<script>
+    function toggleMenu() {
+        const nav = document.querySelector('.mobile-nav');
+        const burger = document.querySelector('.burger-menu');
+
+        // Додавання класу active для анімації бургер-іконки
+        burger.classList.toggle('active');
+
+        // Перевірка чи .nav має клас hidden та його перемикання
+        if (nav.classList.contains('hidden')) {
+            nav.classList.remove('hidden');
+        } else {
+            nav.classList.add('hidden');
+        }
+    }
+
+</script>
 </body>
 </html>
