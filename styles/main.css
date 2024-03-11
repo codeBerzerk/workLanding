@@ -139,7 +139,7 @@ nav ul {
 
 .mobile-nav {
     z-index: 1;
-    display: none;
+    display: flex;
     position: fixed;
     background-color: #495358;
     top: 0;
@@ -150,8 +150,7 @@ nav ul {
     justify-content: center;
     flex-direction: column;
     transform: translateX(100%); /* Меню спочатку сховане за правий край екрану */
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    opacity: 0;
+    transition: transform 0.5s ease;
 }
 
 .mobile-nav ul {
@@ -174,9 +173,7 @@ nav ul {
 
 /* Показуємо меню, коли .mobile-nav не має класу .hidden */
 .mobile-nav:not(.hidden) {
-    display: flex;
     transform: translateX(0);
-    opacity: 1;
 }
 
 @media (max-width: 744px) {
