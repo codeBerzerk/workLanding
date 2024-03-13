@@ -30,6 +30,10 @@
                 <li><a class="open-sans-300 nav-button" href="#services" onclick="toggleMenu()">Services We Offer</a></li>
                 <li><a class="open-sans-300 nav-button" href="#contactUs" onclick="toggleMenu()">Contact us</a></li>
             </ul>
+            <div class="mobile-nav-footer">
+                <p class="open-sans-700 footer-connect">Connect with us now.</p>
+                <a class="open-sans-700" href="mailto:info@nubilumtech.com">info@nubilumtech.com</a>
+            </div>
         </nav>
     </header>
 
@@ -134,11 +138,25 @@
     function toggleMenu() {
         const nav = document.querySelector('.mobile-nav');
         const burger = document.querySelector('.burger-menu');
+        const logo = document.querySelector('.logo');
 
-        // Додавання класу active для анімації бургер-іконки
+
+        if (document.querySelector("html").style.overflowY === "hidden") {
+            document.querySelector("html").style.overflowY="scroll";
+        } else {
+            document.querySelector("html").style.overflowY="hidden";
+        }
+
+
+        if (document.querySelector("body").style.overflowY === "hidden") {
+            document.querySelector("body").style.overflowY="scroll";
+        } else {
+            document.querySelector("body").style.overflowY="hidden";
+        }
+
+        logo.classList.toggle('white-logo');
         burger.classList.toggle('active');
 
-        // Перевірка чи .nav має клас hidden та його перемикання
         if (nav.classList.contains('hidden')) {
             nav.classList.remove('hidden');
         } else {

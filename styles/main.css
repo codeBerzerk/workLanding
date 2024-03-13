@@ -58,6 +58,13 @@ html {
     }
 }
 
+@media (max-width: 744px) {
+    .container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
 header {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -71,10 +78,17 @@ header {
     font-size: 20px;
     z-index: 2;
     transition: 0.3s ease-in-out;
-} @media (max-width: 1400px) {
+}
+
+@media (max-width: 1400px) {
     .logo {
         font-size: 16px;
     }
+}
+
+.white-logo {
+    color: white;
+    transition: 0.3s ease-in-out;
 }
 
 @media (max-width: 744px) {
@@ -87,7 +101,9 @@ nav ul {
     list-style: none;
     display: flex;
     font-size: 16px;
-} @media (max-width: 1400px) {
+}
+
+@media (max-width: 1400px) {
     nav ul {
         font-size: 14px;
     }
@@ -98,7 +114,6 @@ nav ul {
     text-decoration: none;
     color: black;
 }
-
 
 
 .burger-menu {
@@ -146,20 +161,28 @@ nav ul {
     right: 0;
     bottom: 0;
     left: 0;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    transform: translateX(100%); /* Меню спочатку сховане за правий край екрану */
+    justify-content: space-between;
+    transform: translateX(100%);
     transition: transform 0.5s ease;
 }
 
 .mobile-nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     list-style: none;
     padding: 0;
-    text-align: center;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 44px;
+    letter-spacing: 0;
+    margin-top: 90px;
 }
 
 .mobile-nav ul li a {
+    font-size: 32px;
     text-decoration: none;
     color: white;
     display: block;
@@ -171,9 +194,27 @@ nav ul {
     color: white;
 }
 
-/* Показуємо меню, коли .mobile-nav не має класу .hidden */
 .mobile-nav:not(.hidden) {
     transform: translateX(0);
+}
+
+.mobile-nav-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    margin-left: 26px;
+}
+
+.footer-connect {
+    font-size: 26px;
+    color: #7B8990;
+}
+
+a {
+    font-size: 22px;
+    text-decoration: underline;
+    color: white;
 }
 
 @media (max-width: 744px) {
@@ -182,14 +223,14 @@ nav ul {
     }
 
     nav {
-        display: none; /* Сховати меню, коли ширина екрану більше 744px */
+        display: none;
     }
 }
 
 /*Online Presence block styles START*/
 
 .online-presence {
-    background: url("../img/online-presence.png");
+    background: url("../img/online-presence.png") center center;
     background-size: cover;
     height: 568px;
     padding-left: 90px;
@@ -202,8 +243,14 @@ nav ul {
     .online-presence {
         height: 336px;
         padding-left: 0;
-        align-content: center;
-        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 744px) {
+    .online-presence {
+        padding-left: 28px;
+        padding-right: 28px;
+        height: 336px;
     }
 }
 
@@ -218,6 +265,12 @@ nav ul {
     }
 }
 
+@media (max-width: 744px) {
+    .online-presence-title {
+        font-size: 40px;
+    }
+}
+
 .online-presence-text {
     font-size: 56px;
     color: white;
@@ -227,6 +280,12 @@ nav ul {
 @media (max-width: 1400px) {
     .online-presence-text {
         font-size: 30px;
+    }
+}
+
+@media (max-width: 744px) {
+    .online-presence-text {
+        font-size: 26px;
     }
 }
 
@@ -262,15 +321,23 @@ nav ul {
     }
 }
 
+@media (max-width: 744px) {
+    .welcome-title {
+        font-size: 32px;
+    }
+}
+
 .welcome-text {
     font-size: 18px;
     color: black;
     margin-top: 18px;
+    line-height: 33px;
 }
 
 @media (max-width: 1400px) {
     .welcome-text {
         font-size: 16px;
+        line-height: 26px;
     }
 }
 
@@ -319,10 +386,24 @@ nav ul {
     }
 }
 
+@media (max-width: 744px) {
+    .service-card {
+        width: auto;
+        padding: 26px;
+        margin-top: 20px;
+    }
+}
+
 .service-title {
     font-size: 30px;
     color: #5A717C;
     margin-top: 20px;
+}
+
+@media (max-width: 744px) {
+    .service-title {
+        font-size: 24px;
+    }
 }
 
 .service-text {
@@ -337,55 +418,83 @@ nav ul {
 
 .why-choose {
     margin-top: 92px;
-    background-image: url("../img/contactUs.png");
+    background: url("../img/contactUs.png") center center;
     background-size: cover;
     padding: 88px 78px 100px 90px;
-    @media (max-width: 1400px) {
-        .why-choose {
-            padding: 50px 50px 100px 50px;
-            margin-top: 60px;
-        }
-    }
+}
 
-    .why-choose-title {
-        font-size: 56px;
-        color: white;
-
-    }
-
-    .why-choose-text-card-container {
-        margin-top: 66px;
-        display: grid;
-        gap: 66px;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (max-width: 1400px) {
-        .why-choose-text-card-container {
-            grid-template-columns: 1fr;
-            gap: 0;
-        }
-    }
-
-    .why-choose-text-card {
-        width: 90%;
-        color: white;
-        font-size: 18px;
-    }
-
-    @media (max-width: 1400px) {
-        .why-choose-text-card {
-            width: 100%;
-            margin-top: 36px;
-        }
-    }
-
-    .why-choose-subtitle {
-        margin-top: 66px;
-        color: white;
-        font-size: 18px;
+@media (max-width: 1400px) {
+    .why-choose {
+        padding: 50px 50px 100px 50px;
+        margin-top: 60px;
     }
 }
+
+@media (max-width: 744px) {
+    .why-choose {
+        padding: 26px;
+        margin-top: 30px;
+    }
+}
+
+.why-choose-title {
+    font-size: 56px;
+    color: white;
+}
+
+@media (max-width: 744px) {
+    .why-choose-title {
+        line-height: 32px;
+        font-size: 24px;
+    }
+}
+
+.why-choose-text-card-container {
+    margin-top: 66px;
+    display: grid;
+    gap: 66px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 1400px) {
+    .why-choose-text-card-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+@media (max-width: 744px) {
+    .why-choose-text-card-container {
+        margin-top: 26px;
+    }
+}
+
+
+.why-choose-text-card {
+    width: 90%;
+    color: white;
+    font-size: 18px;
+}
+
+@media (max-width: 1400px) {
+    .why-choose-text-card {
+        width: 100%;
+        margin-top: 36px;
+    }
+}
+
+@media (max-width: 744px) {
+    .why-choose-text-card {
+        margin-top: 10px;
+    }
+}
+
+.why-choose-subtitle {
+    margin-top: 66px;
+    color: white;
+    font-size: 18px;
+}
+
 
 /*Contact Us styles END*/
 
@@ -400,16 +509,32 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    .footer-connect {
+}@media (max-width: 744px) {
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: normal;
+        padding-right: 0;
+        padding-left: 26px;
+        margin-top: 36px;
+    }
+}
+    footer .footer-connect {
         font-size: 42px;
         color: white;
+    }@media (max-width: 744px) {
+    footer .footer-connect {
+        font-size: 26px;
     }
+}
 
-    a {
+footer a {
         font-size: 22px;
         text-decoration: underline;
         color: white;
+    }@media (max-width: 744px) {
+    footer a {
+        font-size: 18px;
     }
 }
 
