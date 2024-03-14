@@ -230,7 +230,7 @@ nav ul {
 /*Online Presence block styles START*/
 
 .online-presence {
-    background: url("../img/online-presence.png") center center;
+    background: url("../img/online-presence.webp") center center;
     background-size: cover;
     height: 568px;
     padding-left: 90px;
@@ -418,7 +418,7 @@ nav ul {
 
 .why-choose {
     margin-top: 92px;
-    background: url("../img/contactUs.png") center center;
+    background: url("../img/contactUs.webp") center center;
     background-size: cover;
     padding: 88px 78px 100px 90px;
 }
