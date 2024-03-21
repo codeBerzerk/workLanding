@@ -477,9 +477,9 @@ nav ul {
 
 .why-choose {
     margin-top: 92px;
-    background: url("../static/contactUs.webp") center center;
+    background: url("../static/why.jpg") center center;
     background-size: cover;
-    padding: 88px 78px 100px 90px;
+    padding: 88px 78px 100px 160px;
 }
 
 @media (max-width: 1400px) {
@@ -509,7 +509,7 @@ nav ul {
 }
 
 .why-choose-text-card-container {
-    margin-top: 66px;
+    margin-top: 18px;
     display: grid;
     gap: 66px;
     grid-template-columns: repeat(2, 1fr);
@@ -530,7 +530,7 @@ nav ul {
 
 
 .why-choose-text-card {
-    width: 90%;
+    width: 75%;
     color: white;
     font-size: 18px;
 }
@@ -561,10 +561,9 @@ nav ul {
 
 footer {
     height: 136px;
-    margin-top: 65px;
     padding-left: 70px;
     padding-right: 70px;
-    background: #495358;
+    background: #2C2E2F;
     display: flex;
     align-items: center;
     justify-content: space-between;
