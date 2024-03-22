@@ -73,7 +73,7 @@ header {
 .logo {
     color: #0057B7;
     font-size: 20px;
-    z-index: 2;
+    z-index: 4;
     transition: 0.3s ease-in-out;
 }
 
@@ -114,7 +114,7 @@ nav ul {
 
 
 .burger-menu {
-    z-index: 2;
+    z-index: 4;
     cursor: pointer;
     display: none;
     flex-direction: column;
@@ -150,7 +150,7 @@ nav ul {
 }
 
 .mobile-nav {
-    z-index: 1;
+    z-index: 3;
     display: flex;
     position: fixed;
     background-color: #0057B7;
@@ -258,6 +258,16 @@ nav ul {
     object-fit: cover;
 }
 
+@media (max-width: 1400px) {
+    #myVideo {
+        height: 414px;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .online-presence-content {
     position: relative;
     z-index: 2;
@@ -349,6 +359,12 @@ nav ul {
     }
 }
 
+@media (max-width: 744px) {
+    .welcome {
+        align-items: normal;
+    }
+}
+
 .welcome-title {
     font-size: 46px;
     color: #5A717C;
@@ -379,6 +395,11 @@ nav ul {
     .welcome-text {
         font-size: 16px;
         line-height: 26px;
+    }
+    @media (max-width: 744px) {
+        .welcome-text {
+            text-align: left;
+        }
     }
 }
 
@@ -452,6 +473,13 @@ nav ul {
         width: auto;
         transform: none;
         padding-bottom: 45px;
+    }
+}
+
+@media (max-width: 744px) {
+    .service-description {
+        padding-left: 24px;
+        padding-right: 24px;
     }
 }
 
