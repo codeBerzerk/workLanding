@@ -259,16 +259,18 @@ nav ul {
 }
 
 .online-presence-content {
-        position: relative;
-        z-index: 2;
+    position: relative;
+    z-index: 2;
 }
-
 
 
 @media (max-width: 1400px) {
     .online-presence {
         height: 414px;
         padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -340,9 +342,10 @@ nav ul {
 
 @media (max-width: 1400px) {
     .welcome {
+        width: 90%;
         margin-top: 49px;
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -353,7 +356,7 @@ nav ul {
 
 .grey-divider {
     background-color: #5A717C;
-    height: 3px;
+    height: 2px;
     width: 218px;
     margin-top: 16px;
     margin-bottom: 16px;
@@ -399,9 +402,10 @@ nav ul {
 
 @media (max-width: 1400px) {
     .services {
+        width: 100%;
         grid-template-columns: 1fr;
         gap: 0;
-        margin-top: 19px;
+        margin-top: 30px;
     }
 }
 
@@ -414,6 +418,8 @@ nav ul {
     overflow: hidden;
 
     img {
+        object-fit: cover;
+        object-position: center;
         width: 100%;
         height: 100%;
     }
@@ -438,17 +444,30 @@ nav ul {
 }
 
 @media (max-width: 1400px) {
-    .service-card {
+    .service-description {
+        height: auto;
+        color: #5A717C;
+        background: #FAFAFA;
+        position: static;
         width: auto;
-        padding: 50px;
-        margin-top: 30px;
+        transform: none;
+        padding-bottom: 45px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .service-card {
+        height: auto;
+        width: auto;
+    }
+
+    .service-card img {
+        height: 324px;
     }
 }
 
 @media (max-width: 744px) {
     .service-card {
-        width: auto;
-        padding: 26px;
         margin-top: 20px;
     }
 }
@@ -460,15 +479,24 @@ nav ul {
     font-size: 26px;
 }
 
-@media (max-width: 744px) {
+@media (max-width: 1400px) {
     .service-title {
-        font-size: 24px;
+        height: auto;
+        margin-top: 28px;
+        margin-bottom: 14px;
+        font-size: 26px;
     }
 }
 
 .service-text {
     width: 70%;
     font-size: 18px;
+}
+
+@media (max-width: 1400px) {
+    .service-text {
+        width: 90%;
+    }
 }
 
 /*Services styles END*/
@@ -567,30 +595,36 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}@media (max-width: 744px) {
+}
+
+@media (max-width: 744px) {
     footer {
         flex-direction: column;
         justify-content: center;
         align-items: normal;
         padding-right: 0;
         padding-left: 26px;
-        margin-top: 36px;
     }
 }
-    footer .footer-connect {
-        font-size: 42px;
-        color: white;
-    }@media (max-width: 744px) {
+
+footer .footer-connect {
+    font-size: 42px;
+    color: white;
+}
+
+@media (max-width: 744px) {
     footer .footer-connect {
         font-size: 26px;
     }
 }
 
 footer a {
-        font-size: 22px;
-        text-decoration: underline;
-        color: white;
-    }@media (max-width: 744px) {
+    font-size: 22px;
+    text-decoration: underline;
+    color: white;
+}
+
+@media (max-width: 744px) {
     footer a {
         font-size: 18px;
     }
